@@ -134,6 +134,7 @@ footer {
     .projects-grid {
         grid-template-columns: 1fr;
     }
+
     nav .container {
         flex-direction: column;
         gap: 0.7rem;
