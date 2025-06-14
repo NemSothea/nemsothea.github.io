@@ -188,24 +188,25 @@ h2 {
 }
 
 .languages-list li {
-    background: linear-gradient(135deg, #fffbe6 60%, #fff 100%);
-    color: #b47b00;
-    border-radius: 8px;
-    padding: 0.7rem 1.3rem;
+    background: linear-gradient(135deg, #e8f4fd 60%, #fff 100%);
+    color: #2d5aa0;
+    border-radius: 12px;
+    padding: 0.8rem 1.6rem;
     margin-bottom: 0.5rem;
-    font-weight: 600;
-    font-size: 1.08rem;
-    box-shadow: 0 2px 8px rgba(255, 179, 71, 0.08);
-    border: 1.5px solid #ffe6a1;
-    transition: background 0.2s, color 0.2s, transform 0.2s;
+    font-weight: 700;
+    font-size: 1.12rem;
+    box-shadow: 0 2px 12px rgba(45, 90, 160, 0.08);
+    border: 2px solid #b8d4f0;
+    transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
 
 .languages-list li:hover {
-    background: linear-gradient(135deg, #ffb347 60%, #fffbe6 100%);
+    background: linear-gradient(135deg, #2d5aa0 60%, #4a7bc8 100%);
     color: #fff;
-    transform: scale(1.08) rotate(-2deg);
-    border-color: #ffb347;
+    transform: scale(1.08) rotate(-2deg) translateY(-2px);
+    border-color: #2d5aa0;
+    box-shadow: 0 6px 20px rgba(45, 90, 160, 0.15);
 }
 
 .contact-info {
