@@ -5,13 +5,6 @@ A modern, responsive personal portfolio website showcasing the professional expe
 
 ## 🚀 Features
 
-### Multilingual Support
-- **Khmer (ខ្មែរ)** - Native language with Kantumruy Pro font
-- **English** - Professional language with Inter font  
-- **Korean (한국어)** - Intermediate level with Noto Sans KR font
-- Dynamic language switching with proper font loading
-- HTML lang attribute updates for accessibility
-
 ### Theme System
 - **Light Mode** - Clean, professional appearance
 - **Dark Mode** - Modern dark theme with proper contrast
@@ -146,9 +139,7 @@ A modern, responsive personal portfolio website showcasing the professional expe
 - **Text**: #333 (Light) / #e8e8e8 (Dark)
 
 ### Typography
-- **Khmer**: Kantumruy Pro (Google Fonts)
 - **English**: Inter (Google Fonts)
-- **Korean**: Noto Sans KR (Google Fonts)
 - **Fallback**: Segoe UI, Tahoma, Geneva, Verdana, sans-serif
 
 ### Animations
