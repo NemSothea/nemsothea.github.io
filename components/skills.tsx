@@ -19,7 +19,7 @@ const developmentFocus = [
 ]
 
 const tools = [
-  'Xcode, Git, GitHub, GitLab',
+  'Xcode, Git, GitHub, GitLab, CI/CD',
   'Figma (UI/UX Design)',
   'Database Design & Implementation',
   'MVVM, Clean Architecture',
