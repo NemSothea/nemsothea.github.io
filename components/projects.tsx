@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ExternalLink } from 'lucide-react'
 
+// Project cards: small gallery of key apps with calm but engaging hover states
 const projects = [
   {
     name: 'WeCafé',
@@ -68,9 +69,10 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects" className="py-20 md:py-28 relative overflow-hidden">
+      {/* Very light background blobs so the cards remain the main focus */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl animate-blob"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-400 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl animate-blob" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-400 rounded-full filter blur-3xl animate-blob animation-delay-2000" />
       </div>
 
       <div className="container relative z-10">
@@ -91,65 +93,68 @@ export default function Projects() {
               data-aos-delay={project.delay}
               className="group relative"
             >
-              <div className="relative h-full bg-[var(--card-bg)] dark:bg-[var(--card-bg)] rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-[var(--border-color)] overflow-hidden">
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl`}></div>
-                
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                  <div className="absolute inset-0 animate-shimmer bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-                </div>
+              {/* Individual project card */}
+              <div className="relative h-full bg-[var(--card-bg)] dark:bg-[var(--card-bg)] rounded-3xl p-8 shadow-md hover:shadow-xl transition-all duration-400 border border-[var(--border-color)] overflow-hidden hover:-translate-y-1">
+                {/* Soft gradient halo behind the card */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-400 -z-10 blur-xl`}
+                />
 
-                <div className="relative z-10">
+                <div className="relative z-10 flex flex-col items-center text-center">
+                  {/* Icon or app image */}
                   <div className="mb-6 flex items-center justify-center">
                     {project.image && project.link ? (
-                      <Link 
-                        href={project.link} 
-                        target="_blank" 
+                      <Link
+                        href={project.link}
+                        target="_blank"
                         className="group/image relative inline-block"
                       >
-                        <div className={`absolute -inset-4 bg-gradient-to-br ${project.gradient} rounded-3xl blur-xl opacity-0 group-hover/image:opacity-50 transition-opacity duration-500`}></div>
-                        <div className="relative transform transition-all duration-500 group-hover/image:scale-110 group-hover/image:rotate-6">
+                        <div
+                          className={`absolute -inset-3 bg-gradient-to-br ${project.gradient} rounded-3xl blur-xl opacity-0 group-hover/image:opacity-60 transition-opacity duration-400`}
+                        />
+                        <div className="relative transform transition-transform duration-400 group-hover/image:scale-105 group-hover/image:rotate-3">
                           <Image
                             src={project.image}
                             alt={`${project.name} App Icon`}
-                            width={100}
-                            height={100}
-                            className="rounded-3xl shadow-2xl border-4 border-white/20"
+                            width={90}
+                            height={90}
+                            className="rounded-3xl shadow-xl border-4 border-white/40"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-3xl opacity-0 group-hover/image:opacity-100 transition-opacity"></div>
                         </div>
                       </Link>
                     ) : (
-                      <div className={`w-24 h-24 rounded-3xl bg-gradient-to-br ${project.gradient} flex items-center justify-center text-5xl shadow-2xl transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-6`}>
+                      <div
+                        className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${project.gradient} flex items-center justify-center text-4xl shadow-xl`}
+                      >
                         {project.icon}
                       </div>
                     )}
                   </div>
 
-                  <h3 className="text-2xl font-bold mb-3 text-[var(--text)] group-hover:text-[var(--accent)] transition-colors duration-300 flex items-center gap-2">
+                  {/* Title + description */}
+                  <h3 className="text-2xl font-semibold mb-3 text-[var(--text)] group-hover:text-[var(--accent)] transition-colors">
                     {project.name}
                     {project.link && (
-                      <ExternalLink className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <ExternalLink className="inline-block w-4 h-4 ml-2 align-middle opacity-60 group-hover:opacity-100" />
                     )}
                   </h3>
 
-                  <p className="text-[var(--text)] leading-relaxed mb-4 opacity-90">
+                  <p className="text-[var(--text)] leading-relaxed mb-4 opacity-90 text-sm md:text-base">
                     {project.description}
                   </p>
 
+                  {/* Link button */}
                   {project.link && (
                     <Link
                       href={project.link}
                       target="_blank"
-                      className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r ${project.gradient} text-white font-semibold opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-lg hover:shadow-xl`}
+                      className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r ${project.gradient} text-white font-semibold text-sm md:text-base shadow-md hover:shadow-lg transition-shadow`}
                     >
-                      View Project
+                      View on App Store
                       <ExternalLink className="w-4 h-4" />
                     </Link>
                   )}
                 </div>
-
-                <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-white/5 to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <div className="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-tr from-white/5 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </div>
             </div>
           ))}

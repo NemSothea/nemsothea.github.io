@@ -24,7 +24,8 @@
 
 @layer utilities {
   .container {
-    @apply w-[90%] max-w-[900px] mx-auto;
+    /* Global content width helper for a more “app-like” layout */
+    @apply w-[92%] max-w-6xl mx-auto;
   }
 }
 
