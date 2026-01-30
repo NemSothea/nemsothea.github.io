@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { Github, Linkedin } from 'lucide-react'
 
 // Hero section: first impression with intro, CTAs and profile card
 export default function Hero() {
@@ -47,16 +48,18 @@ export default function Hero() {
               <Link
                 href="https://linkedin.com/in/nem-sothea"
                 target="_blank"
-                className="group px-6 py-3 glass rounded-xl hover-lift font-medium relative overflow-hidden"
+                className="group px-6 py-3 glass rounded-xl hover-lift font-medium relative overflow-hidden inline-flex items-center gap-2"
               >
+                <Linkedin className="relative z-10 size-5" aria-hidden />
                 <span className="relative z-10">LinkedIn</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity" />
               </Link>
               <Link
                 href="https://github.com/nemsothea"
                 target="_blank"
-                className="group px-6 py-3 glass rounded-xl hover-lift font-medium relative overflow-hidden"
+                className="group px-6 py-3 glass rounded-xl hover-lift font-medium relative overflow-hidden inline-flex items-center gap-2"
               >
+                <Github className="relative z-10 size-5" aria-hidden />
                 <span className="relative z-10">GitHub</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-purple-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity" />
               </Link>

@@ -35,7 +35,7 @@ export default function Experience() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
                 'Lead development of enterprise-level iOS applications utilizing Swift and SwiftUI',
-                'Oversee team operations as Leader of the Mobile Department',
+                'Oversea team operations as Leader of the Mobile Department',
                 'Implement and optimize modern architecture patterns (MVVM, Clean Architecture)',
                 'Pioneered adoption of SwiftUI for UI development across multiple projects',
                 'Supervised project delegation and provided mentorship to junior iOS developers',

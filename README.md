@@ -106,28 +106,69 @@ A modern, responsive personal portfolio website showcasing the professional expe
 - **LinkedIn**: [linkedin.com/in/nem-sothea](https://linkedin.com/in/nem-sothea)
 - **GitHub**: [github.com/nemsothea](https://github.com/nemsothea)
 
+## ✅ Before you push (avoid deploy errors)
+
+Run these **before every push** so GitHub Actions can build and deploy successfully:
+
+1. **Install dependencies** (if you added or changed packages):
+   ```bash
+   npm install
+   ```
+
+2. **Run the production build** (catches JS/TypeScript and build errors):
+   ```bash
+   npm run prepush
+   ```
+   Or: `npm run build`
+
+3. **Fix any errors** – If the build fails locally, it will fail on GitHub. Fix TypeScript/JS or import errors, then run `npm run build` again until it passes.
+
+4. **Commit and push** only after the build succeeds.
+
+**Quick one-liner before push:**
+```bash
+npm run prepush && git add . && git status
+```
+Then commit and push if the build passed and your changes look correct.
+
+---
+
 ## 🛠️ Technical Implementation
 
-### Frontend Technologies
-- **HTML5** - Semantic markup
-- **CSS3** - Modern styling with CSS variables
-- **JavaScript (ES6+)** - Interactive functionality
-- **AOS (Animate On Scroll)** - Scroll animations
+### Stack (JavaScript / React)
+- **Next.js** - React framework with App Router, static export for GitHub Pages
+- **React** - UI components and interactivity
+- **TypeScript** - Typed JavaScript (TSX) for components
+- **Tailwind CSS** - Utility-first styling and theming
+- **Lucide React** - Icons (GitHub, LinkedIn, etc.)
+- **AOS (Animate On Scroll)** - Scroll-triggered animations
+- **next-themes** - Light/dark theme with system preference
 
 ### Key Features
-- CSS Custom Properties for theming
-- Responsive design with mobile-first approach
-- Accessibility considerations (ARIA labels, semantic HTML)
-- Performance optimized with efficient animations
-- Cross-browser compatibility
+- React components in `app/` and `components/`
+- Tailwind + CSS variables for theme (light/dark)
+- Responsive, mobile-first layout
+- Static export (`output: 'export'`) for deployment
+- Accessibility (ARIA, semantic markup) and performance-focused
 
 ### File Structure
 ```
-├── index.html          # Main HTML file
-├── style.css           # Stylesheet with theme system
-├── script.js           # JavaScript functionality
-├── images/             # Project images and icons
-└── README.md           # This file
+├── app/                # Next.js App Router
+│   ├── globals.css     # Global styles & theme variables
+│   ├── layout.tsx      # Root layout
+│   └── page.tsx        # Home page
+├── components/         # React components (TSX)
+│   ├── hero.tsx, about.tsx, skills.tsx, experience.tsx
+│   ├── projects.tsx, contact.tsx, footer.tsx
+│   ├── navigation.tsx, scroll-to-top.tsx
+│   └── theme-provider.tsx, aos-init.tsx
+├── public/             # Static assets
+│   ├── images/         # Images (profile, projects)
+│   └── pdf/            # Resume/portfolio PDF
+├── next.config.js      # Next config (static export, unoptimized images)
+├── tailwind.config.js
+├── package.json
+└── README.md
 ```
 
 ## 🎨 Design System
@@ -163,7 +204,7 @@ A modern, responsive personal portfolio website showcasing the professional expe
 - Graceful degradation for older browsers
 
 ## 📄 License
-© 2025 Nem Sothea. All rights reserved.
+© 2026 Nem Sothea. All rights reserved.
 
 ---
 

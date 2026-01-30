@@ -23,6 +23,7 @@ const contactItems = [
     icon: Linkedin,
     color: 'from-blue-600 to-blue-700',
     external: true,
+    hideValue: true,
   },
   {
     label: 'GitHub',
@@ -31,6 +32,7 @@ const contactItems = [
     icon: Github,
     color: 'from-gray-700 to-gray-900',
     external: true,
+    hideValue: true,
   },
 ]
 
@@ -81,9 +83,11 @@ export default function Contact() {
                           <div className="text-sm text-[var(--text)] opacity-60 mb-1">
                             {item.label}
                           </div>
-                          <div className="text-lg font-semibold text-[var(--text)] group-hover:text-[var(--accent)] transition-colors">
-                            {item.value}
-                          </div>
+                          {!('hideValue' in item && item.hideValue) && (
+                            <div className="text-lg font-semibold text-[var(--text)] group-hover:text-[var(--accent)] transition-colors">
+                              {item.value}
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>
