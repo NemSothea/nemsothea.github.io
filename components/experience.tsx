@@ -54,6 +54,48 @@ export default function Experience() {
             </div>
           </div>
         </div>
+        <div className="mb-16" data-aos="fade-up">
+  <div className="bg-[var(--card-bg)] dark:bg-[var(--card-bg)] rounded-3xl p-8 md:p-12 shadow-xl border border-[var(--border-color)] hover:shadow-2xl transition-all duration-500">
+    <div className="flex items-start gap-4 mb-6">
+      <div className="p-4 rounded-2xl bg-gradient-to-br from-green-500 to-teal-500 text-white shadow-lg">
+        {/* You can use GraduationCap or UserPlus from lucide-react */}
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 016.16 6.422M12 14v6m0-6l6.16-3.422a12.083 12.083 0 016.16 6.422" />
+        </svg>
+      </div>
+      <div className="flex-1">
+        <h3 className="text-2xl md:text-3xl font-bold text-[var(--text)] mb-2">
+          Part-time iOS Professor & Project Supervisor
+        </h3>
+        <p className="text-lg text-[var(--text)] opacity-80 mb-4">
+          September 2025 - Present | (NIA) Prek Leap National Institute Of Agriculture
+        </p>
+      </div>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {[
+        'Instruct undergraduate and graduate students in iOS development using Swift, SwiftUI, and modern architectural patterns',
+        'Mentor and lead student teams through full iOS project lifecycles from concept to App Store deployment',
+        'Develop curriculum focused on industry-relevant skills including UI/UX best practices, testing methodologies, and version control',
+        'Supervise capstone projects with emphasis on real-world problem solving and production-ready code standards',
+        'Facilitate workshops on emerging technologies including AI integration in mobile development workflows',
+        'Provide career guidance and portfolio development support for aspiring iOS developers',
+        'Collaborate with industry partners to align academic content with current market demands and hiring trends',
+        'Evaluate and provide constructive feedback on student projects focusing on code quality, performance, and maintainability',
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="flex items-start gap-3 p-4 rounded-xl bg-[var(--secondary)] dark:bg-[var(--secondary)] border border-[var(--border-color)] hover:border-[var(--accent)] transition-all duration-300 group"
+        >
+          <div className="w-2 h-2 rounded-full bg-green-500 mt-2 group-hover:scale-150 transition-transform"></div>
+          <p className="text-[var(--text)] flex-1">{item}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
 
         <div data-aos="fade-up">
           <div className="flex items-center gap-4 mb-8">

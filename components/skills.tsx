@@ -37,6 +37,7 @@ const researchInterests = [
   'Advanced Mobile Architecture design patterns',
   'Emerging Technologies in software development',
   'Cross-platform Development methodologies',
+  'Cybersecurity best practices for mobile applications',
 ]
 
 export default function Skills() {
